@@ -54,20 +54,20 @@
 
 1. Header
 
-- Issue: Icons (like the search icon) didn’t have labels for screen readers.
-- Fix: Adding aria-label to buttons and links so screen readers understand them
+   - Issue: Icons (like the search icon) didn’t have labels for screen readers.
+   - Fix: Adding aria-label to buttons and links so screen readers understand them
 
-- Issue: The search input was missing a visible or screen reader-friendly label.
-- Fix: Adding a screen reader-only label (with sr-only) to the search icon.
+   - Issue: The search input was missing a visible or screen reader-friendly label.
+   - Fix: Adding a screen reader-only label (with sr-only) to the search icon.
 
-- Issue: Some elements (like the logo and avatar links) didn’t clearly say what they do for assistive technologies.
-- Fix: Using alt text like "Worctionary logo" for images.
+   - Issue: Some elements (like the logo and avatar links) didn’t clearly say what they do for assistive technologies.
+   - Fix: Using alt text like "Worctionary logo" for images.
 
-- Issue: No clear semantic role (role="banner") for the <header>.
-- Fix: Adding role="banner" to clearly define the header area for screen readers
+   - Issue: No clear semantic role (role="banner") for the header.
+   - Fix: Adding role="banner" to clearly define the header area for screen readers
 
-- Issue: Site Log Not keyboard accessible
-- Fix: Wrapped with an anchor tag
+   - Issue: Site Log Not keyboard accessible
+   - Fix: Wrapped with an anchor tag
 
 2. Avatar fallback
 
@@ -80,9 +80,8 @@
    - Issue: Not keyboard focusable
    - Fix: Wrapped with button tag
 
-   - Issue: No semantic grouping (<ul>, <li>)
-   - Fix: Added semantic grouping with
-     ul and li
+   - Issue: No semantic grouping (ul, li)
+   - Fix: Added semantic grouping with ul and li
 
    - Issue: No descriptive labels for screen readers
    - Fix: added aria-labelledby to group
