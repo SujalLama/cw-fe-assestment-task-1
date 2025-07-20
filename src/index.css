@@ -1,20 +1,41 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./fonts.css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&: is(.dark *));
+
+@theme {
+  --font-inter: Inter, sans-serif;
+  --font-work-sans: "Work Sans", sans-serif;
+
+  /* color variables */
+  --color-surface: #293038;
+  --color-input-bg: #1e1e1e;
+  --color-primary-hover: #1d4ed8;
+  --color-input-border: #3d4754;
+  --color-input-bg: #1c2126;
+  --color-badge-bg: #293038;
+  --color-text-primary: #ffffff;
+  --color-text-muted: #9eabb8;
+
+  /* container size */
+  --container-xl: 75rem;
+  --container-lg: 58rem;
+}
 
 @theme inline {
+  --font-sans: var(--font-inter);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-background: var(--background);
+  --color-background: #0f0f0f;
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
+  --color-primary: #1a80e5;
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -112,8 +133,9 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-0 focus-visible:border-ring focus-visible:ring-ring focus-visible:ring-[3px];
   }
+
   body {
     @apply bg-background text-foreground;
   }
